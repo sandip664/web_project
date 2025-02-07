@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Showcase</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d1b14; /* Dark Green */
+            color: white;
+            text-align: center;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: #183d29;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #00ff7f;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: #00ff7f;
+            color: black;
+        }
+
+        /* Product Grid */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .product-card {
+            background: #162822;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 255, 127, 0.2);
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product-title {
+            font-size: 20px;
+            margin: 15px 0 10px;
+            color: #00ff7f;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #ccc;
+            margin: 10px 0;
+        }
+
+        .buy-now {
+            display: inline-block;
+            background: #00ff7f;
+            color: black;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .buy-now:hover {
+            background: #ffcc00;
+            color: black;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-links {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h1>Product Showcase</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="login.html">Log In</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Product Cards -->
+        <div class="product-card">
+            <img src="Images/Laptop.png" alt="Product Image" class="product-image">
+            <h2 class="product-title">Gaming Laptop</h2>
+            <p class="price">$1499</p>
+            <p class="description">High-performance gaming laptop with RTX graphics and ultra-fast processor.</p>
+            <a href="#" class="buy-now">Buy Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="Images/Earbuds.png" alt="Product Image" class="product-image">
+            <h2 class="product-title">Wireless Earbuds</h2>
+            <p class="price">$199</p>
+            <p class="description">Noise-canceling wireless earbuds with crystal clear sound and deep bass.</p>
+            <a href="#" class="buy-now">Buy Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="Images/Smartwatch.png" alt="Product Image" class="product-image">
+            <h2 class="product-title">Smart Watch</h2>
+            <p class="price">$249</p>
+            <p class="description">Fitness tracking smartwatch with heart rate monitoring and GPS support.</p>
+            <a href="#" class="buy-now">Buy Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="Images/Keyboard.png" alt="Product Image" class="product-image">
+            <h2 class="product-title">Mechanical Keyboard</h2>
+            <p class="price">$129</p>
+            <p class="description">RGB-backlit mechanical keyboard with fast and tactile switches.</p>
+            <a href="#" class="buy-now">Buy Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="Images/Phone.jpg" alt="Product Image" class="product-image">
+            <h2 class="product-title">Smartphone X</h2>
+            <p class="price">$999</p>
+            <p class="description">Flagship smartphone with a high-resolution camera and OLED display.</p>
+            <a href="#" class="buy-now">Buy Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="Images/Speaker.jpg" alt="Product Image" class="product-image">
+            <h2 class="product-title">Bluetooth Speaker</h2>
+            <p class="price">$99</p>
+            <p class="description">Portable speaker with 360-degree sound and waterproof design.</p>
+            <a href="#" class="buy-now">Buy Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="Images/TV.jpg" alt="Product Image" class="product-image">
+            <h2 class="product-title">4K TV</h2>
+            <p class="price">$1199</p>
+            <p class="description">Ultra HD 4K Smart TV with built-in streaming apps.</p>
+            <a href="#" class="buy-now">Buy Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="Images/VR2.jpg" alt="Product Image" class="product-image">
+            <h2 class="product-title">VR Headset</h2>
+            <p class="price">$349</p>
+            <p class="description">Immersive virtual reality headset for gaming and entertainment.</p>
+            <a href="#" class="buy-now">Buy Now</a>
+        </div>
+    </div>
+
+</body>
+</html>
